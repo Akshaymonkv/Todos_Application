@@ -4,10 +4,10 @@ const router = express.Router();            //Calling the router function
 
 const  {
     readTodo,
+    createTodo,
     updateTodo,
-    deleteTodo,
-    createTodo
-} = require('./controller');               //declaring routes          
+    deleteTodo
+    } = require('./controller');               //declaring routes          
 
 router.get('/todos', readTodo);
 router.post('/todos/post',createTodo);
