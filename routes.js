@@ -11,7 +11,7 @@ const  {
 
 router.get('/todos', readTodo);
 router.post('/todos/post',createTodo);
-router.put('todos/update/:id', updateTodo);
-router.delete('todos/delete/:id',deleteTodo);
+router.put('/todos/update/:id', updateTodo);
+router.delete('/todos/delete/:id',deleteTodo);
 
 module.exports = router;

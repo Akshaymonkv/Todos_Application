@@ -26,8 +26,8 @@ const readTodo = (req, res, next)=>{
 const updateTodo = (req, res, next)=>{
     const {body} = req
     const {id} = req.params
-    const index = todos.findIndex((item)=>item.id == id)
-    if(typeof index != -1){
+    const index = todos.findIndex((item)=>item.id === id)
+    if(typeof index !== -1){
         todos[index] = {id,...body}
     }
     res.send('Update succesfull').status(200)
@@ -37,7 +37,7 @@ const deleteTodo = (req, res, next)=>{
     const {id} = req.params
     const newTodos = todos.filter((item)=>item.id !== id)
     todos = newTodos
-    console.log(newTodos)
+    console.log(todosodos)
     res.status(200).json(todos)
 };
 
